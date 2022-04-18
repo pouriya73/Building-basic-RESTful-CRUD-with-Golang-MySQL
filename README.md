@@ -51,3 +51,15 @@ vishal@vishal:~/go/src/rest-go-demo$
 
 Now, let’s create our simple Person struct which would be our object in reference.
 
+```
+type Person struct {
+ID        string `json:"id"`
+FirstName string `json:"firstName"`
+LastName  string `json:"lastName"`
+Age       string `json:"age"`
+}
+```
+
+# Create a Simple HTTP Server
+
+We would be using “gorilla/mux” to create a simple server for handling our HTTP requests.
