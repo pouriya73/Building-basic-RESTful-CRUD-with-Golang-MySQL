@@ -102,3 +102,14 @@ DELETE / DELETE endpoint
 ```
 router.HandleFunc("/delete/{id}", deletPersonByID).Methods("DELETE")
 ```
+
+deletePersonByID() will delete the “id” passed in the request parameter and deletes the respective record from the database.
+Now, as all our endpoints are in place let's integrate all of them and test out our CRUD operations.
+We will do this by executing the below commands
+
+```
+go mod tidy
+go build
+./rest-go-demo
+```
+
