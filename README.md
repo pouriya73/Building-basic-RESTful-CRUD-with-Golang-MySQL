@@ -36,3 +36,18 @@ let’s start with creating a database specific to our needs.
 ```
 CREATE DATABASE learning;
 ```
+
+Let’s create a struct for managing our database configuration which would be utilized to create a connection to the database.
+
+Now, let’s create a client to manage and create connections to our Database
+
+Let’s test whether our client can connect with our database or not!!
+
+```
+vishal@vishal:~/go/src/rest-go-demo$ go run main.go 
+2021/02/14 16:56:34 Connection was successful!!
+vishal@vishal:~/go/src/rest-go-demo$
+```
+
+Now, let’s create our simple Person struct which would be our object in reference.
+
