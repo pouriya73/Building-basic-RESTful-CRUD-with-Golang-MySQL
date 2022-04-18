@@ -76,3 +76,29 @@ router.HandleFunc("/create",createPerson).Methods("POST")
 
 Let’s create a respective createPerson(), the function that will take the POST request data and create a new person entry in DB.
 We will do the same by first Unmarsahlling the JSON data retrieved from the body into our Person struct created above and later insert the data by creating a new record.
+
+
+GET / SELECT endpoint
+Similarly, we added handler and respective function for POST, we will all “/get/{id}” to our router to retrieve data
+
+```
+router.HandleFunc("/get/{id}", getPersonByID).Methods("GET")
+```
+
+Let’s add the respective getPersonByID() function, which will utilize the request parameter “id” to retrieve the respective data and return a JSON response.
+Here we would be reversing the procedure we did while creating POST endpoint, we would be Marshalling the person struct retrieved from the database to JSON and create an HTTP response.
+
+PUT / UPDATE endpoint
+Now I might assume you might have guessed what comes next in our router and respective functions
+
+```
+router.HandleFunc("/update/{id}", updatePersonByID).Methods("PUT")
+```
+
+updatePersonByID() will take up the POST request data, Unmarshall the JSON to person struct, and update respectively
+
+DELETE / DELETE endpoint
+
+```
+router.HandleFunc("/delete/{id}", deletPersonByID).Methods("DELETE")
+```
