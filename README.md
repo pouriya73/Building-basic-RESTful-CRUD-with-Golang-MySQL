@@ -63,3 +63,16 @@ Age       string `json:"age"`
 # Create a Simple HTTP Server
 
 We would be using “gorilla/mux” to create a simple server for handling our HTTP requests.
+
+
+An HTTP server, operating on port 8090 will be initiated for our usage.
+Now let’s add our REST endpoint’s and move further in our journey
+POST / CREATE endpoint
+We will start by adding a route “/create/” to our router to serve an endpoint which will create a new person whenever triggered
+
+```
+router.HandleFunc("/create",createPerson).Methods("POST")
+```
+
+Let’s create a respective createPerson(), the function that will take the POST request data and create a new person entry in DB.
+We will do the same by first Unmarsahlling the JSON data retrieved from the body into our Person struct created above and later insert the data by creating a new record.
